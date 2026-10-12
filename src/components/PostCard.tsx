@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import type { Post } from '../types';
 import { formatDate } from '../utils/formatDate';
 import UserAvatar from './UserAvatar';
@@ -13,7 +13,6 @@ interface PostCardProps {
 
 const PostCard = ({ post }: PostCardProps) => {
   const { user } = useAuth();
-  const navigate = useNavigate();
   const deletePost = useDeletePost();
   const updatePost = useUpdatePost();
 
@@ -118,7 +117,7 @@ const PostCard = ({ post }: PostCardProps) => {
         )}
       </div>
 
-      {/* Body — Edit Mode or View Mode */}
+      {/* Body */}
       {isEditing ? (
         <div>
           <textarea
