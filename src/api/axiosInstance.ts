@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL of your .NET backend
-const BASE_URL = 'http://localhost:5241/api';
+const BASE_URL = 'https://socialsphere-backend-t7ax.onrender.com/api';
 
 // Create axios instance
 const axiosInstance = axios.create({
